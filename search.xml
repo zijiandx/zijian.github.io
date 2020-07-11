@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>setTimeout()について</title>
+      <link href="/2020/07/11/setTimeout-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/"/>
+      <url>/2020/07/11/setTimeout-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</url>
+      
+        <content type="html"><![CDATA[<p>setTimeoutはある処理を一定時間後に実行するように命令することができるメソッドです。<br>setTimeout()によるタイマー処理は続けて複数のタイマーを起動させることができるので合わせてご紹介しておきます。<br>基本的な方法としては、setTimeout()の引数に指定した関数の中でさらに続けてsetTimeout()を実行するというものです。<br>次の例を見てください！<br>1    setTimeout(function() {<br>2      console.log(‘1つ目のタイマー’);<br>3<br>4        setTimeout(function() {<br>5            console.log(‘2つ目のタイマー’);<br>6        }, 1000);<br>7<br>8    }, 2000);<br>実行結果<br>1    1つ目のタイマー<br>2    2つ目のタイマー<br>この例では、1つ目のsetTimeout()を実行した中でさらにもう1つのsetTimeout()を実行していますね。<br><img src="/.com//js.jpg" alt="javascript"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 実用技術 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>getPicklist項目内容取得</title>
+      <link href="/2020/07/11/NewBlog/"/>
+      <url>/2020/07/11/NewBlog/</url>
+      
+        <content type="html"><![CDATA[<p>public List&lt;Schema.PicklistEntry&gt; getPicklist(String sObjName, String fieldName){<br>    List&lt;Schema.PicklistEntry&gt; pickList;<br>    Schema.SObjectType sObjType = (Schema.SObjectType) Schema.getGlobalDescribe().get(sObjName);<br>    if(sObjType != null){<br>        Map&lt;String, Schema.SObjectField&gt; fieldmap = sObjType.getDescribe().fields.getMap();<br>        Schema.SObjectField f = (Schema.SObjectField) fieldmap.get(fieldName);<br>        if(f != null){<br>            Schema.DescribeFieldResult r = f.getDescribe();<br>            pickList = r.getPicklistValues();<br>            System.debug(‘値’ + pickList);<br>        }<br>    }<br>    return pickList;<br>}<br>//取引先の種別という選択リストの取得<br>List&lt;Schema.PicklistEntry&gt; picklist = getPicklist(‘LiveChatTranscriptEvent’, ‘Type’);</p><p>//ログで中身を確認する<br>for(Schema.PicklistEntry pick : picklist){<br>    System.debug(‘—————–’);<br>    System.debug(‘Label :’ + pick.getLabel());<br>    System.debug(‘Value :’ + pick.getValue());<br>    System.debug(‘Active:’ + pick.isActive());<br>    System.debug(‘isDefaultValue:’ + pick.isDefaultValue());<br>}</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 实用技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> apex </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2020/07/09/hello-world/"/>
       <url>/2020/07/09/hello-world/</url>
