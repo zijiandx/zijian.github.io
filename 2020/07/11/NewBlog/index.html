@@ -24,11 +24,13 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="public List&lt;Schema.PicklistEntry&gt; getPicklist(String sObjName, String fieldName){    List&lt;Schema.PicklistEntry&gt; pickList;    Schema.SObjectType sObjType &#x3D; (Schema.SObjectType) Schema.getGl">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://dl.dropboxusercontent.com/s/6k0mbogid4awcih/1056773.jpg">
 <meta property="article:published_time" content="2020-07-11T12:23:48.000Z">
-<meta property="article:modified_time" content="2020-07-11T12:48:16.360Z">
+<meta property="article:modified_time" content="2020-07-11T14:26:53.992Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="apex">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dl.dropboxusercontent.com/s/6k0mbogid4awcih/1056773.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -166,7 +168,7 @@
         </div>
         <div class="content" style="overflow: auto">
             <p>public List&lt;Schema.PicklistEntry&gt; getPicklist(String sObjName, String fieldName){<br>    List&lt;Schema.PicklistEntry&gt; pickList;<br>    Schema.SObjectType sObjType = (Schema.SObjectType) Schema.getGlobalDescribe().get(sObjName);<br>    if(sObjType != null){<br>        Map&lt;String, Schema.SObjectField&gt; fieldmap = sObjType.getDescribe().fields.getMap();<br>        Schema.SObjectField f = (Schema.SObjectField) fieldmap.get(fieldName);<br>        if(f != null){<br>            Schema.DescribeFieldResult r = f.getDescribe();<br>            pickList = r.getPicklistValues();<br>            System.debug(‘値’ + pickList);<br>        }<br>    }<br>    return pickList;<br>}<br>//取引先の種別という選択リストの取得<br>List&lt;Schema.PicklistEntry&gt; picklist = getPicklist(‘LiveChatTranscriptEvent’, ‘Type’);</p>
-<p>//ログで中身を確認する<br>for(Schema.PicklistEntry pick : picklist){<br>    System.debug(‘—————–’);<br>    System.debug(‘Label :’ + pick.getLabel());<br>    System.debug(‘Value :’ + pick.getValue());<br>    System.debug(‘Active:’ + pick.isActive());<br>    System.debug(‘isDefaultValue:’ + pick.isDefaultValue());<br>}</p>
+<p>//ログで中身を確認する<br>for(Schema.PicklistEntry pick : picklist){<br>    System.debug(‘—————–’);<br>    System.debug(‘Label :’ + pick.getLabel());<br>    System.debug(‘Value :’ + pick.getValue());<br>    System.debug(‘Active:’ + pick.isActive());<br>    System.debug(‘isDefaultValue:’ + pick.isDefaultValue());<br>}<br><img src="https://dl.dropboxusercontent.com/s/6k0mbogid4awcih/1056773.jpg" alt="alt"></p>
 
         </div>
         <div class="post-reply">
