@@ -8,7 +8,7 @@
       <link href="/2020/07/11/%E7%94%BB%E9%9D%A2%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E9%A0%86%E7%95%AA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E2%80%9D/"/>
       <url>/2020/07/11/%E7%94%BB%E9%9D%A2%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E9%A0%86%E7%95%AA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E2%80%9D/</url>
       
-        <content type="html"><![CDATA[<p><strong>標準画面において、各チェック処理が下記順番で実行する。</strong><br>    ・ページレイアウトによる必須チェック<br>    ・カスタム項目定義による必須チェック<br>    ・データ型によるデータ形式チェックと長さチェック<br>    ・トリガによるカスタムチェック<br>    ・入力規則によるカスタムチェック<br>    ・ユニークチェック    </p><p><strong>カスタム画面において、各チェック処理が下記順番で実行する。</strong><br>    ・Salesforce標準機能によるチェック<br>    ・Apexコントローラによるカスタムチェック<br>    ・カスタム項目定義による必須チェック<br>    ・データ型によるデータ形式チェックと長さチェック<br>    ・トリガによるカスタムチェック<br>    ・入力規則によるカスタムチェック<br>    ・ユニークチェック<br><img src="https://dl.dropboxusercontent.com/s/exve0wniykw6x5x/1048951.jpg" alt="alt"></p>]]></content>
+        <content type="html"><![CDATA[<p><strong>標準画面において、各チェック処理が下記順番で実行する。</strong><br>    ・ページレイアウトによる必須チェック<br>    ・カスタム項目定義による必須チェック<br>    ・データ型によるデータ形式チェックと長さチェック<br>    ・トリガによるカスタムチェック<br>    ・入力規則によるカスタムチェック<br>    ・ユニークチェック    </p><p><strong>カスタム画面において、各チェック処理が下記順番で実行する。</strong><br>    ・Salesforce標準機能によるチェック<br>    ・Apexコントローラによるカスタムチェック<br>    ・カスタム項目定義による必須チェック<br>    ・データ型によるデータ形式チェックと長さチェック<br>    ・トリガによるカスタムチェック<br>    ・入力規則によるカスタムチェック<br>    ・ユニークチェック</p><div style="text-align:left;"><img src="https://dl.dropboxusercontent.com/s/exve0wniykw6x5x/1048951.jpg" width="30%"></div>]]></content>
       
       
       <categories>
@@ -33,7 +33,7 @@
       <link href="/2020/07/11/SOQL-%E9%9B%86%E8%A8%88%E9%96%A2%E6%95%B0%E3%81%AE%E4%BD%BF%E7%94%A8/"/>
       <url>/2020/07/11/SOQL-%E9%9B%86%E8%A8%88%E9%96%A2%E6%95%B0%E3%81%AE%E4%BD%BF%E7%94%A8/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://dl.dropboxusercontent.com/s/k8m1rh6ba1iylkx/sql.jpg" alt="alt"><br><img src="https://raw.githubusercontent.com/zijiandx/Images-blog/master/2.jpg" alt="alt"></p>]]></content>
+        <content type="html"><![CDATA[<div style="text-align:left;"><img src="https://dl.dropboxusercontent.com/s/k8m1rh6ba1iylkx/sql.jpg" width="70%"></div><div style="text-align:left;"><img src="https://raw.githubusercontent.com/zijiandx/Images-blog/master/2.jpg" width="30%"></div>]]></content>
       
       
       <categories>
@@ -83,7 +83,7 @@
       <link href="/2020/07/11/NewBlog/"/>
       <url>/2020/07/11/NewBlog/</url>
       
-        <content type="html"><![CDATA[<p>public List&lt;Schema.PicklistEntry&gt; getPicklist(String sObjName, String fieldName){<br>    List&lt;Schema.PicklistEntry&gt; pickList;<br>    Schema.SObjectType sObjType = (Schema.SObjectType) Schema.getGlobalDescribe().get(sObjName);<br>    if(sObjType != null){<br>        Map&lt;String, Schema.SObjectField&gt; fieldmap = sObjType.getDescribe().fields.getMap();<br>        Schema.SObjectField f = (Schema.SObjectField) fieldmap.get(fieldName);<br>        if(f != null){<br>            Schema.DescribeFieldResult r = f.getDescribe();<br>            pickList = r.getPicklistValues();<br>            System.debug(‘値’ + pickList);<br>        }<br>    }<br>    return pickList;<br>}<br>//取引先の種別という選択リストの取得<br>List&lt;Schema.PicklistEntry&gt; picklist = getPicklist(‘LiveChatTranscriptEvent’, ‘Type’);</p><p>//ログで中身を確認する<br>for(Schema.PicklistEntry pick : picklist){<br>    System.debug(‘—————–’);<br>    System.debug(‘Label :’ + pick.getLabel());<br>    System.debug(‘Value :’ + pick.getValue());<br>    System.debug(‘Active:’ + pick.isActive());<br>    System.debug(‘isDefaultValue:’ + pick.isDefaultValue());<br>}<br><img src="https://dl.dropboxusercontent.com/s/6k0mbogid4awcih/1056773.jpg" alt="alt"></p>]]></content>
+        <content type="html"><![CDATA[<font color="blue">public List<Schema.PicklistEntry> getPicklist(String sObjName, String fieldName){<pre><code>List&lt;Schema.PicklistEntry&gt; pickList;Schema.SObjectType sObjType = (Schema.SObjectType) Schema.getGlobalDescribe().get(sObjName);if(sObjType != null){    Map&lt;String, Schema.SObjectField&gt; fieldmap = sObjType.getDescribe().fields.getMap();    Schema.SObjectField f = (Schema.SObjectField) fieldmap.get(fieldName);    if(f != null){        Schema.DescribeFieldResult r = f.getDescribe();        pickList = r.getPicklistValues();        System.debug(&#39;値&#39; + pickList);    }}return pickList;</code></pre><p>}<br></p></Schema.PicklistEntry></font><br><font color="blue"><br>//取引先の種別という選択リストの取得<br>List&lt;Schema.PicklistEntry&gt; picklist = getPicklist(‘LiveChatTranscriptEvent’, ‘Type’);<p></p><p>//ログで中身を確認する<br>for(Schema.PicklistEntry pick : picklist){<br>    System.debug(‘—————–’);<br>    System.debug(‘Label :’ + pick.getLabel());<br>    System.debug(‘Value :’ + pick.getValue());<br>    System.debug(‘Active:’ + pick.isActive());<br>    System.debug(‘isDefaultValue:’ + pick.isDefaultValue());<br>}<br></p></font><p></p><div style="text-align:left;"><img src="https://dl.dropboxusercontent.com/s/6k0mbogid4awcih/1056773.jpg" width="30%"></div>]]></content>
       
       
       <categories>
@@ -108,7 +108,7 @@
       <link href="/2020/07/09/hello-world/"/>
       <url>/2020/07/09/hello-world/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to my Blog!<br><img src="https://dl.dropboxusercontent.com/s/340u2lvx4xaewd9/02980_kingoftheskies_3840x2400.jpg" alt="Welcome"></p>]]></content>
+        <content type="html"><![CDATA[<font size="5">Welcome to my Blog!</font><div style="text-align:left;"><img src="https://dl.dropboxusercontent.com/s/340u2lvx4xaewd9/02980_kingoftheskies_3840x2400.jpg" width="30%"></div>]]></content>
       
       
       

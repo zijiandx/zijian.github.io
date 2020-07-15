@@ -17,16 +17,16 @@
   
   <title>getPicklist項目内容取得 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="public List&lt;Schema.PicklistEntry&gt; getPicklist(String sObjName, String fieldName){    List&lt;Schema.PicklistEntry&gt; pickList;    Schema.SObjectType sObjType &#x3D; (Schema.SObjectType) Schema.getGl">
+  <meta name="description" content="public List getPicklist(String sObjName, String fieldName){  List&lt;Schema.PicklistEntry&gt; pickList; Schema.SObjectType sObjType &#x3D; (Schema.SObjectType) Schema.getGlobalDescribe().get(sObjName); if">
 <meta property="og:type" content="article">
 <meta property="og:title" content="getPicklist項目内容取得">
 <meta property="og:url" content="http://yoursite.com/2020/07/11/NewBlog/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="public List&lt;Schema.PicklistEntry&gt; getPicklist(String sObjName, String fieldName){    List&lt;Schema.PicklistEntry&gt; pickList;    Schema.SObjectType sObjType &#x3D; (Schema.SObjectType) Schema.getGl">
+<meta property="og:description" content="public List getPicklist(String sObjName, String fieldName){  List&lt;Schema.PicklistEntry&gt; pickList; Schema.SObjectType sObjType &#x3D; (Schema.SObjectType) Schema.getGlobalDescribe().get(sObjName); if">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://dl.dropboxusercontent.com/s/6k0mbogid4awcih/1056773.jpg">
 <meta property="article:published_time" content="2020-07-11T12:23:48.000Z">
-<meta property="article:modified_time" content="2020-07-11T14:26:53.992Z">
+<meta property="article:modified_time" content="2020-07-15T11:08:37.868Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="apex">
 <meta name="twitter:card" content="summary">
@@ -37,8 +37,6 @@
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/common.css">
@@ -167,9 +165,25 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <p>public List&lt;Schema.PicklistEntry&gt; getPicklist(String sObjName, String fieldName){<br>    List&lt;Schema.PicklistEntry&gt; pickList;<br>    Schema.SObjectType sObjType = (Schema.SObjectType) Schema.getGlobalDescribe().get(sObjName);<br>    if(sObjType != null){<br>        Map&lt;String, Schema.SObjectField&gt; fieldmap = sObjType.getDescribe().fields.getMap();<br>        Schema.SObjectField f = (Schema.SObjectField) fieldmap.get(fieldName);<br>        if(f != null){<br>            Schema.DescribeFieldResult r = f.getDescribe();<br>            pickList = r.getPicklistValues();<br>            System.debug(‘値’ + pickList);<br>        }<br>    }<br>    return pickList;<br>}<br>//取引先の種別という選択リストの取得<br>List&lt;Schema.PicklistEntry&gt; picklist = getPicklist(‘LiveChatTranscriptEvent’, ‘Type’);</p>
-<p>//ログで中身を確認する<br>for(Schema.PicklistEntry pick : picklist){<br>    System.debug(‘—————–’);<br>    System.debug(‘Label :’ + pick.getLabel());<br>    System.debug(‘Value :’ + pick.getValue());<br>    System.debug(‘Active:’ + pick.isActive());<br>    System.debug(‘isDefaultValue:’ + pick.isDefaultValue());<br>}<br><img src="https://dl.dropboxusercontent.com/s/6k0mbogid4awcih/1056773.jpg" alt="alt"></p>
+            <font color="blue">
+public List<Schema.PicklistEntry> getPicklist(String sObjName, String fieldName){
 
+<pre><code>List&lt;Schema.PicklistEntry&gt; pickList;
+Schema.SObjectType sObjType = (Schema.SObjectType) Schema.getGlobalDescribe().get(sObjName);
+if(sObjType != null){
+    Map&lt;String, Schema.SObjectField&gt; fieldmap = sObjType.getDescribe().fields.getMap();
+    Schema.SObjectField f = (Schema.SObjectField) fieldmap.get(fieldName);
+    if(f != null){
+        Schema.DescribeFieldResult r = f.getDescribe();
+        pickList = r.getPicklistValues();
+        System.debug(&#39;値&#39; + pickList);
+    }
+}
+return pickList;</code></pre><p>}<br></p></Schema.PicklistEntry></font><br><font color="blue"><br>//取引先の種別という選択リストの取得<br>List&lt;Schema.PicklistEntry&gt; picklist = getPicklist(‘LiveChatTranscriptEvent’, ‘Type’);<p></p>
+<p>//ログで中身を確認する<br>for(Schema.PicklistEntry pick : picklist){<br>    System.debug(‘—————–’);<br>    System.debug(‘Label :’ + pick.getLabel());<br>    System.debug(‘Value :’ + pick.getValue());<br>    System.debug(‘Active:’ + pick.isActive());<br>    System.debug(‘isDefaultValue:’ + pick.isDefaultValue());<br>}<br></p></font><p></p>
+<div style="text-align:left;">
+<img src="https://dl.dropboxusercontent.com/s/6k0mbogid4awcih/1056773.jpg" width="30%">
+</div>
         </div>
         <div class="post-reply">
             

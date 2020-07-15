@@ -31,8 +31,6 @@
     <link rel="icon" href="/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
   
 <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="/css/nav.css">
@@ -169,6 +167,11 @@
                                 <br>
                                 
 
+
+
+
+
+
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
@@ -218,7 +221,11 @@
                             <p>
                                 <strong>getPicklist項目内容取得</strong> <small class="post-date">at: 2020-07-11</small>
                                 <br>
-                                public List&lt;Schema.PicklistEntry&gt; getPicklist(String sObjName, String fieldName){    List&lt;Schema.PicklistEntry&gt; pickList;    Schema.SObjectType sObjType = (Schema.SOb..
+                                
+public List getPicklist(String sObjName, String fieldName){
+
+List&lt;Schema.PicklistEntry&gt; pickList;
+Schema.SObjectType sObjType = (Schema.SObjectType) Schema.getGlobalDescri..
                             </p>
                             <button class="button is-info">Read</button>
                         </div>
