@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>画面チェック順番について”</title>
+      <title>画面チェック順番について</title>
       <link href="/2020/07/11/%E7%94%BB%E9%9D%A2%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E9%A0%86%E7%95%AA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E2%80%9D/"/>
       <url>/2020/07/11/%E7%94%BB%E9%9D%A2%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E9%A0%86%E7%95%AA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E2%80%9D/</url>
       
-        <content type="html"><![CDATA[<p>標準画面において、各チェック処理が下記順番で実行する。<br>    ・ページレイアウトによる必須チェック<br>    ・カスタム項目定義による必須チェック<br>    ・データ型によるデータ形式チェックと長さチェック<br>    ・トリガによるカスタムチェック<br>    ・入力規則によるカスタムチェック<br>    ・ユニークチェック    </p><p>カスタム画面において、各チェック処理が下記順番で実行する。<br>    ・Salesforce標準機能によるチェック<br>    ・Apexコントローラによるカスタムチェック<br>    ・カスタム項目定義による必須チェック<br>    ・データ型によるデータ形式チェックと長さチェック<br>    ・トリガによるカスタムチェック<br>    ・入力規則によるカスタムチェック<br>    ・ユニークチェック<br><img src="https://dl.dropboxusercontent.com/s/exve0wniykw6x5x/1048951.jpg" alt="alt"></p>]]></content>
+        <content type="html"><![CDATA[<p><strong>標準画面において、各チェック処理が下記順番で実行する。</strong><br>    ・ページレイアウトによる必須チェック<br>    ・カスタム項目定義による必須チェック<br>    ・データ型によるデータ形式チェックと長さチェック<br>    ・トリガによるカスタムチェック<br>    ・入力規則によるカスタムチェック<br>    ・ユニークチェック    </p><p><strong>カスタム画面において、各チェック処理が下記順番で実行する。</strong><br>    ・Salesforce標準機能によるチェック<br>    ・Apexコントローラによるカスタムチェック<br>    ・カスタム項目定義による必須チェック<br>    ・データ型によるデータ形式チェックと長さチェック<br>    ・トリガによるカスタムチェック<br>    ・入力規則によるカスタムチェック<br>    ・ユニークチェック<br><img src="https://dl.dropboxusercontent.com/s/exve0wniykw6x5x/1048951.jpg" alt="alt"></p>]]></content>
       
       
       <categories>
@@ -33,7 +33,7 @@
       <link href="/2020/07/11/SOQL-%E9%9B%86%E8%A8%88%E9%96%A2%E6%95%B0%E3%81%AE%E4%BD%BF%E7%94%A8/"/>
       <url>/2020/07/11/SOQL-%E9%9B%86%E8%A8%88%E9%96%A2%E6%95%B0%E3%81%AE%E4%BD%BF%E7%94%A8/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://dl.dropboxusercontent.com/s/k8m1rh6ba1iylkx/sql.jpg" alt="alt"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://dl.dropboxusercontent.com/s/k8m1rh6ba1iylkx/sql.jpg" alt="alt"><br><img src="https://raw.githubusercontent.com/zijiandx/Images-blog/master/2.jpg" alt="alt"></p>]]></content>
       
       
       <categories>
